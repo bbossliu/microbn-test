@@ -1,0 +1,14 @@
+server:
+  port: 9001
+eureka:
+  instance:
+    #eureka注册名
+    hostname: eureka9001.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url: #将当前项目注册进eureka注册中心的注册地址中去
+      defaultZone: http://eureka9001.com:9001/eureka/
+spring:
+  application:
+    name: eureka01

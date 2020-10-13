@@ -1,0 +1,11 @@
+server:
+  port: 8002
+eureka:
+  instance:
+    instance-id: LXCloudProvider02 #配置本服务在eureka中的id
+  client:
+    service-url:
+      defaultZone: http://eureka9001.com:9001/eureka/
+spring:
+  application:
+    name: product

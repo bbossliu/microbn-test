@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>micro-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>micro-product</module>
+        <module>micro-product02</module>
+        <module>micro-consumer</module>
+        <module>micro-api</module>
+        <module>micro-eureka01</module>
+    </modules>
+
+    <properties>
+        <mybatis-plus-version>3.4.0</mybatis-plus-version>
+        <lombok-version>1.16.10</lombok-version>
+        <feign-version>1.4.4.RELEASE</feign-version>
+        <micro-api-version>1.0-SNAPSHOT</micro-api-version>
+        <druid-version>1.1.10</druid-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- 引入Spring Cloud依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- 引入Spring Cloud依赖 -->
+
+            <!-- 引入Spring Boot依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.0.3.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- 引入Spring Boot依赖 -->
+
+            <!--mybatisplus 相关依赖-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-version}</version>
+            </dependency>
+            <!--mybatisplus 相关依赖-->
+
+            <!--lombok配置-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
+            <!--lombok配置-->
+
+            <!--feign依赖-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>${feign-version}</version>
+            </dependency>
+            <!--feign依赖-->
+
+            <!--mysql驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+            </dependency>
+            <!--mysql驱动-->
+
+            <!--集成druid连接池-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-version}</version>
+            </dependency>
+            <!--集成druid连接池-->
+
+            <!--引入micro-api依赖-->
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>micro-api</artifactId>
+                <version>${micro-api-version}</version>
+            </dependency>
+            <!--引入micro-api依赖-->
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
